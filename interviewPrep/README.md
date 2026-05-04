@@ -1,50 +1,80 @@
-# One-Month Interview Preparation — May
+# 30-Day MERN/PERN Interview Prep Roadmap
 
-## Overview
+An interactive React web app that displays a structured 30-day study plan for landing a Full Stack Developer role. The plan covers both the MERN (MongoDB, Express, React, Node.js) and PERN (PostgreSQL, Express, React, Node.js) stacks with curated resources and real interview questions for each topic.
 
-This repository is dedicated to a structured one-month interview preparation plan for the month of May. It serves as a central place to track progress, organize study materials, and document solutions to practice problems across all major computer science and software engineering topics.
+## Live App
 
-## Goals
+Run locally with:
 
-The primary goal of this repository is to build a strong foundation in data structures, algorithms, system design, and behavioral interview skills within one month. Each week is designed to focus on a specific set of topics so that preparation remains focused and measurable. By the end of the month, the aim is to be fully confident and ready to tackle technical interviews at any level.
+```bash
+npm install
+npm run dev
+```
 
-## Topics Covered
+Then open [http://localhost:5173](http://localhost:5173) in your browser.
 
-This repository covers the following core areas of interview preparation:
+## What the App Does
 
-- **Data Structures** — Arrays, linked lists, stacks, queues, trees, graphs, heaps, and hash tables are studied and practiced with real problem examples.
-- **Algorithms** — Sorting, searching, dynamic programming, greedy algorithms, recursion, backtracking, and divide-and-conquer techniques are explored in depth.
-- **System Design** — High-level design concepts such as scalability, load balancing, caching, database design, and distributed systems are reviewed and discussed.
-- **Object-Oriented Design** — Principles such as SOLID, design patterns, and class design are practiced through real-world scenarios.
-- **Behavioral Questions** — Common behavioral interview questions are answered using the STAR (Situation, Task, Action, Result) method to communicate experience clearly.
-- **Problem Solving** — Coding challenges from platforms like LeetCode, HackerRank, and Codeforces are solved and documented with clear explanations.
+The app renders a single-page, dark-themed study dashboard split into **four weekly phases**. Each phase can be selected via tab buttons at the top, and individual topics expand on click to reveal:
 
-## Monthly Study Plan
+- **Subtopics** — a detailed list of concepts to study
+- **Resources** — curated links to free learning materials
+- **Interview question** — a sample question likely asked in technical interviews
 
-The month is divided into four focused weeks, each targeting a specific domain:
+A stats bar at the top tracks total study hours (~80h), stacks covered, weekly themes, and practice platforms.
 
-- **Week 1** focuses on revising core data structures and solving easy-to-medium level problems to warm up and build problem-solving habits.
-- **Week 2** dives into advanced algorithms including dynamic programming, graph traversal (BFS/DFS), and backtracking, with medium-to-hard problems.
-- **Week 3** is dedicated to system design concepts, low-level design principles, and mock design interview sessions.
-- **Week 4** involves full mock interviews, behavioral preparation, revision of weak areas, and timed problem-solving sessions to simulate real interview conditions.
+## Study Plan Overview
 
-## How This Repository Is Organized
+| Phase | Days | Theme |
+|-------|------|-------|
+| Week 1 | 1–7 | JavaScript ES6+ & React Core Concepts |
+| Week 2 | 8–14 | Node.js Internals & Express/REST API Design |
+| Week 3 | 15–21 | MongoDB (MERN) & PostgreSQL (PERN) |
+| Week 4 | 22–30 | Browser Storage, Performance, DSA & Mock Interviews |
 
-Each topic has its own dedicated folder containing notes, code solutions, and references. Solutions are written in a clean, readable format with inline comments explaining the logic. Every problem includes the problem statement, the approach taken, the time and space complexity analysis, and the final solution.
+## Tech Stack
 
-## Resources
+| Tool | Purpose |
+|------|---------|
+| [React 19](https://react.dev) | UI components and state (`useState`) |
+| [Vite 8](https://vite.dev) | Dev server and build tool |
+| [ESLint](https://eslint.org) | Code linting |
 
-The following resources are used throughout this preparation:
+No external UI library is used — all styling is done with inline styles.
 
-- *Cracking the Coding Interview* by Gayle Laakmann McDowell is the primary reference for problem-solving strategies and behavioral preparation.
-- *Designing Data-Intensive Applications* by Martin Kleppmann is referenced for system design concepts.
-- LeetCode and NeetCode are used for daily coding practice.
-- YouTube channels such as TechDummies, Gaurav Sen, and Abdul Bari are used for visual explanations of algorithms and system design.
+## Project Structure
 
-## Progress Tracking
+```
+interviewPrep/
+├── src/
+│   ├── main.jsx          # React entry point
+│   ├── App.jsx           # Root component — renders <StudyPlan />
+│   └── StudyPlan.jsx     # Main component: week data, tabs, topic cards
+├── public/
+│   └── favicon.svg
+├── index.html
+├── vite.config.js
+├── eslint.config.js
+└── package.json
+```
 
-Progress is tracked weekly by updating this README and committing new solutions regularly. Consistency is key — the goal is to solve at least two to three problems every day and review at least one system design topic per week.
+## Available Scripts
 
-## Contact
+```bash
+npm run dev       # Start development server
+npm run build     # Build for production
+npm run preview   # Preview the production build
+npm run lint      # Run ESLint
+```
 
-This is a personal interview preparation repository. If you find any of the solutions or notes helpful, feel free to use them as a reference for your own preparation.
+## Resources Covered in the Plan
+
+- [MDN Web Docs](https://developer.mozilla.org) — JavaScript, HTTP, Web Storage
+- [javascript.info](https://javascript.info) — In-depth JS tutorials
+- [React Official Docs](https://react.dev)
+- [Node.js Docs](https://nodejs.org/en/docs)
+- [Express.js Docs](https://expressjs.com)
+- [MongoDB University](https://university.mongodb.com) (free)
+- [PostgreSQL Docs](https://www.postgresql.org/docs/)
+- [LeetCode](https://leetcode.com), [NeetCode](https://neetcode.io/roadmap), [HackerRank](https://www.hackerrank.com)
+- [Pramp](https://www.pramp.com) & [Interviewing.io](https://interviewing.io) — Free mock interviews
